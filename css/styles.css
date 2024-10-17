@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: bisque;
+    background:  linear-gradient(to top, var(--grisclaro) 0%,  var(--blanco) 100%);
     margin: 0;
 }
 
@@ -90,11 +90,39 @@ body {
 }
 
 .hero {
-    background-image: url('../img/hero.jpg'); /* Importamos nuestra imagen como fondo el .. es para regresar un nivel del directorio */
+    background-image: url('../img/hero.jpg'); /* Imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: #fff; /* Ajusta el color del texto para mejor visibilidad */
-    padding: 3rem 0; /* Agrega espacio alrededor del contenido */
+    padding: 10rem 0; /* Espacio alrededor del contenido */
     text-align: center; /* Centra el texto dentro de la sección */
+    position: relative; /* Permite el posicionamiento absoluto de los elementos hijos */
+}
+
+.contenido-hero {
+    position: absolute; /* Posiciona el cuadro en relación al padre .hero */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo rojo con transparencia */
+    top: 0; /* Inicia en la parte superior */
+    left: 0; /* Inicia desde la izquierda */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    flex-direction: column; /* Coloca el contenido en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+.boton1
+
+{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    display: inline-block;
+    border-radius: 1rem;
+    font-weight: bolder;
 }
